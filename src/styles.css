@@ -1,0 +1,224 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * LOVIZA design system — "midnight studio".
+ * Deep navy canvas (#0a0c14), cyan signal accent (#00d4f5 -> violet #7149ff),
+ * native system type (Segoe UI on Windows, SF on Apple, Roboto on Android).
+ * All colors are semantic tokens. Never hardcode colors in components.
+ */
+
+/*
+ * Neutral scale + black re-skinned to the navy palette, so every existing
+ * `bg-black`, `bg-zinc-*`, `border-zinc-*` and `text-zinc-*` class across the
+ * site renders on-brand without touching component markup.
+ */
+@theme {
+  --color-black: #0a0c14;
+  --color-canvas-top: #111623;
+
+  --color-zinc-100: #f1f5f9;
+  --color-zinc-200: #e2e8f0;
+  --color-zinc-300: #cbd5e1;
+  --color-zinc-400: #94a3b8;
+  --color-zinc-500: #64748b;
+  --color-zinc-600: #475569;
+  --color-zinc-700: #2c3447;
+  --color-zinc-800: #1f2637;
+  --color-zinc-900: #141825;
+  --color-zinc-950: #0d1019;
+}
+
+@theme inline {
+  /* One native system stack everywhere (no webfont download). `font-mono`
+     intentionally maps to it too, so the whole site uses a single typeface. */
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-display: var(--font-sans);
+  --font-mono: var(--font-sans);
+
+  --color-primary-light: var(--primary-light);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-blog: var(--blog);
+  --color-infographic: var(--infographic);
+  --color-video: var(--video);
+  --color-linkedin_post: var(--linkedin_post);
+  --color-instagram_post: var(--instagram_post);
+  --color-instagram_reel: var(--instagram_reel);
+  --color-facebook_post: var(--facebook_post);
+  --color-twitter_post: var(--twitter_post);
+  --color-pinterest: var(--pinterest);
+  --color-youtube_short: var(--youtube_short);
+  --color-tiktok_video: var(--tiktok_video);
+  --color-product_service_video: var(--product_service_video);
+  --color-carousel: var(--carousel);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --shadow-glow: 0 0 0 1px var(--border), 0 24px 60px -24px oklch(0 0 0 / 0.75);
+  --shadow-lift: 0 18px 40px -22px oklch(0 0 0 / 0.85);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  --background: oklch(0.156 0.017 273); /* #0a0c14 */
+  --foreground: oklch(0.968 0.007 248); /* #f1f5f9 */
+
+  --card: oklch(0.212 0.027 271); /* #141825 */
+  --card-foreground: oklch(0.968 0.007 248);
+  --popover: oklch(0.212 0.027 271);
+  --popover-foreground: oklch(0.968 0.007 248);
+
+  --primary: oklch(0.8 0.141 214); /* #00d4f5 cyan */
+  --primary-light: oklch(0.81 0.127 222); /* #4dd3fb — hover / highlight */
+  --primary-foreground: oklch(0.156 0.017 273); /* navy text on cyan */
+
+  --secondary: oklch(0.25 0.034 269); /* #1b2132 */
+  --secondary-foreground: oklch(0.968 0.007 248);
+
+  --muted: oklch(0.25 0.034 269);
+  --muted-foreground: oklch(0.711 0.035 257); /* #94a3b8 */
+
+  --accent: oklch(0.287 0.037 267); /* #222a3d */
+  --accent-foreground: oklch(0.968 0.007 248);
+
+  --destructive: oklch(0.63 0.2 25);
+  --destructive-foreground: oklch(0.98 0.005 250);
+
+  --success: oklch(0.72 0.15 158);
+  --success-foreground: oklch(0.18 0.02 160);
+
+  --border: oklch(0.27 0.033 267); /* #1f2637 */
+  --input: oklch(0.27 0.033 267);
+  --ring: oklch(0.8 0.141 214);
+
+  --blog: oklch(0.72 0.13 232);
+  --infographic: oklch(0.8 0.141 214); /* legacy — old rows only, no new content uses this */
+  --video: oklch(0.7 0.16 355); /* legacy — old rows only, no new content uses this */
+
+  /* Approximate, adjustable — these are decorative category colors,
+     not exact brand-guideline hex values. */
+  --linkedin_post: oklch(0.62 0.15 255);
+  --instagram_post: oklch(0.66 0.19 335);
+  --instagram_reel: oklch(0.68 0.2 350);
+  --facebook_post: oklch(0.6 0.16 265);
+  --twitter_post: oklch(0.55 0.02 260);
+  --pinterest: oklch(0.6 0.2 20);
+  --youtube_short: oklch(0.62 0.22 30);
+  --tiktok_video: oklch(0.72 0.13 195);
+  --product_service_video: oklch(0.7 0.14 155);
+  --carousel: oklch(0.66 0.15 300);
+
+  --chart-1: oklch(0.8 0.141 214);
+  --chart-2: oklch(0.72 0.13 232);
+  --chart-3: oklch(0.7 0.16 355);
+  --chart-4: oklch(0.72 0.15 158);
+  --chart-5: oklch(0.68 0.09 285);
+
+  --sidebar: oklch(0.174 0.019 270); /* #0d1019 */
+  --sidebar-foreground: oklch(0.9 0.012 255);
+  --sidebar-primary: oklch(0.8 0.141 214);
+  --sidebar-primary-foreground: oklch(0.156 0.017 273);
+  --sidebar-accent: oklch(0.25 0.034 269);
+  --sidebar-accent-foreground: oklch(0.968 0.007 248);
+  --sidebar-border: oklch(0.27 0.033 267);
+  --sidebar-ring: oklch(0.8 0.141 214);
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility surface {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+@utility grid-noise {
+  background-image:
+    radial-gradient(circle at 12% -10%, oklch(0.8 0.141 214 / 0.16), transparent 45%),
+    radial-gradient(circle at 88% 0%, oklch(0.564 0.252 285 / 0.14), transparent 42%);
+}
+
+@utility text-gradient {
+  background: linear-gradient(
+    100deg,
+    var(--color-foreground) 15%,
+    var(--color-primary) 60%,
+    var(--color-foreground) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
