@@ -44,8 +44,8 @@ export const Footer: React.FC = () => {
             <div className="font-bold text-white uppercase text-[11px] tracking-wider">Trust & Security</div>
             <ul className="space-y-2">
               <li><a href="#" onClick={playClickSound} className="hover:text-primary transition-colors">Brand DNA Protection</a></li>
-              <li><a href="#" onClick={playClickSound} className="hover:text-primary transition-colors">Terms of Service</a></li>
-              <li><a href="#" onClick={playClickSound} className="hover:text-primary transition-colors">Privacy Policy</a></li>
+              <li><a href="/terms-of-service.html" onClick={playClickSound} className="hover:text-primary transition-colors">Terms of Service</a></li>
+              <li><a href="/privacy-policy.html" onClick={playClickSound} className="hover:text-primary transition-colors">Privacy Policy</a></li>
               <li><a href="#" onClick={playClickSound} className="hover:text-primary transition-colors">Commercial Rights</a></li>
               <li><a href="#" onClick={playClickSound} className="hover:text-primary transition-colors"></a></li>
             </ul>
