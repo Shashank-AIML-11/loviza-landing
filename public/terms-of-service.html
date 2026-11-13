@@ -1,138 +1,767 @@
-LOVIZA TERMS OF SERVICE
-Effective Date: 29 AUG 2026
-Last Updated: 29 AUG 2026
-These Terms of Service ("Terms") constitute a legally binding agreement between you ("you", "your", or "User") and Sharidhs Tech Solutions, operating the LOVIZA service ("LOVIZA", "we", "us", or "our").
-These Terms govern your access to and use of the LOVIZA website, application, software, APIs, AI features, integrations, and related services (collectively, the "Service").
-By creating an account, purchasing a subscription, clicking an acceptance button, or using LOVIZA, you agree to these Terms.
-1. DESCRIPTION OF LOVIZA
-LOVIZA is an AI-powered marketing automation platform that may provide marketing strategy generation, campaign planning, content generation, copywriting, image generation, video generation, social-media content creation, content calendars, campaign management, scheduling, automated publishing, marketing research, analytics, AI-powered recommendations, social-media integrations, agency/multi-brand management, and other marketing automation functionality.
-Features may vary by subscription plan and may be changed, added, suspended, or discontinued.
-2. ELIGIBILITY
-You may use LOVIZA only if you are legally capable of entering a binding agreement, comply with applicable laws, provide accurate account information, and do not violate these Terms.
-If you use LOVIZA for a company, agency, or organization, you represent that you have authority to bind it.
-3. ACCOUNT REGISTRATION
-You agree to provide accurate information, maintain current information, protect login credentials, comply with subscription restrictions, notify LOVIZA of unauthorized access, and remain responsible for activity under your account.
-You must not impersonate another person or create an account using false information.
-4. SUBSCRIPTIONS
-LOVIZA may offer free and paid plans. Features, usage limits, pricing, billing frequency, credits, generation limits, and other plan conditions will be displayed on the applicable pricing page.
-LOVIZA may change plans or pricing with reasonable notice where required by law.
-5. AUTOMATIC RENEWAL
-Where a subscription automatically renews, it may renew at the applicable billing interval unless cancelled before the renewal date. You authorize the payment provider to charge the payment method associated with your account.
-6. PAYMENT
-Paid services must be paid according to applicable pricing and billing terms. Third-party payment processors may process payment information. LOVIZA may suspend or restrict paid functionality for failed, reversed, disputed, or overdue payments.
-7. REFUNDS
-Unless otherwise stated on the pricing page or required by applicable law, subscription fees are generally non-refundable after the billing period begins. Unused subscription time, credits, or generation allowances generally have no cash value. Refund requests may be considered at LOVIZA's discretion.
-8. FREE TRIALS AND PROMOTIONAL CREDITS
-LOVIZA may offer free trials, promotional credits, discounts, or incentives. We may limit eligibility, modify terms, prevent abuse, cancel fraudulent or duplicate accounts, or discontinue promotions. Promotional credits generally have no cash value unless stated otherwise.
-9. AI-GENERATED CONTENT
-LOVIZA uses AI systems to generate text, images, videos, captions, marketing concepts, campaign strategies, recommendations, and other creative material.
-AI outputs may be inaccurate, incomplete, repetitive, biased, unsuitable, or similar to content generated for other users.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Terms of Service | LOVIZA</title>
+
+    <meta name="description" content="Read the Terms of Service governing your use of LOVIZA AI-powered marketing automation platform.">
+
+    <style>
+        :root {
+            --primary: #FFD600;
+            --dark: #171717;
+            --text: #333333;
+            --muted: #777777;
+            --background: #ffffff;
+            --light: #f8f8f8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--light);
+            color: var(--text);
+            line-height: 1.75;
+        }
+
+        header {
+            background: var(--dark);
+            padding: 22px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: 800;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        header a.back {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .hero {
+            background: var(--primary);
+            padding: 55px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: var(--dark);
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #333;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 40px auto;
+            padding: 45px;
+            background: var(--background);
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+
+        .intro {
+            margin-bottom: 30px;
+        }
+
+        .section {
+            margin-bottom: 28px;
+        }
+
+        .section h2 {
+            font-size: 19px;
+            color: var(--dark);
+            margin-bottom: 10px;
+            border-left: 4px solid var(--primary);
+            padding-left: 12px;
+        }
+
+        .section p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .section ul,
+        .section ol {
+            padding-left: 25px;
+            margin: 10px 0;
+        }
+
+        .section li {
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        a {
+            color: #8a7000;
+        }
+
+        footer {
+            background: var(--dark);
+            color: #ccc;
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 13px;
+        }
+
+        footer span {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 15px;
+                padding: 25px 18px;
+            }
+
+            .hero h1 {
+                font-size: 27px;
+            }
+
+            header {
+                padding: 18px 5%;
+            }
+
+            .logo {
+                font-size: 25px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .container {
+                box-shadow: none;
+                margin: 0 auto;
+            }
+
+            header, footer {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="https://loviza.click" class="logo">
+        LOVI<span>ZA</span>
+    </a>
+
+    <a href="https://loviza.click" class="back">
+        Back to Home
+    </a>
+</header>
+
+<div class="hero">
+    <h1>Terms of Service</h1>
+    <p>Effective Date: 29 August 2026</p>
+    <p>Last Updated: 29 August 2026</p>
+</div>
+
+<main class="container">
+
+<div class="intro">
+    <p>
+        These Terms of Service ("Terms") constitute a legally binding
+        agreement between you ("you", "your", or "User") and
+        Sharidhs Tech Solutions, operating the LOVIZA service
+        ("LOVIZA", "we", "us", or "our").
+    </p>
+
+    <p>
+        These Terms govern your access to and use of the LOVIZA
+        website, application, software, APIs, AI features,
+        integrations, and related services (collectively, the "Service").
+    </p>
+
+    <p>
+        By creating an account, purchasing a subscription,
+        clicking an acceptance button, or using LOVIZA,
+        you agree to these Terms.
+    </p>
+</div>
+
+<div class="section">
+<h2>1. DESCRIPTION OF LOVIZA</h2>
+<p>
+LOVIZA is an AI-powered marketing automation platform that may provide
+marketing strategy generation, campaign planning, content generation,
+copywriting, image generation, video generation, social-media content
+creation, content calendars, campaign management, scheduling,
+automated publishing, marketing research, analytics, AI-powered
+recommendations, social-media integrations, agency/multi-brand
+management, and other marketing automation functionality.
+</p>
+<p>
+Features may vary by subscription plan and may be changed,
+added, suspended, or discontinued.
+</p>
+</div>
+
+<div class="section">
+<h2>2. ELIGIBILITY</h2>
+<p>
+You may use LOVIZA only if you are legally capable of entering
+a binding agreement, comply with applicable laws, provide accurate
+account information, and do not violate these Terms.
+</p>
+<p>
+If you use LOVIZA for a company, agency, or organization,
+you represent that you have authority to bind it.
+</p>
+</div>
+
+<div class="section">
+<h2>3. ACCOUNT REGISTRATION</h2>
+<p>
+You agree to provide accurate information, maintain current
+information, protect login credentials, comply with subscription
+restrictions, notify LOVIZA of unauthorized access, and remain
+responsible for activity under your account.
+</p>
+<p>
+You must not impersonate another person or create an account
+using false information.
+</p>
+</div>
+
+<div class="section">
+<h2>4. SUBSCRIPTIONS</h2>
+<p>
+LOVIZA may offer free and paid plans. Features, usage limits,
+pricing, billing frequency, credits, generation limits, and other
+plan conditions will be displayed on the applicable pricing page.
+</p>
+<p>
+LOVIZA may change plans or pricing with reasonable notice
+where required by law.
+</p>
+</div>
+
+<div class="section">
+<h2>5. AUTOMATIC RENEWAL</h2>
+<p>
+Where a subscription automatically renews, it may renew at the
+applicable billing interval unless cancelled before the renewal date.
+You authorize the payment provider to charge the payment method
+associated with your account.
+</p>
+</div>
+
+<div class="section">
+<h2>6. PAYMENT</h2>
+<p>
+Paid services must be paid according to applicable pricing and
+billing terms. Third-party payment processors may process payment
+information. LOVIZA may suspend or restrict paid functionality
+for failed, reversed, disputed, or overdue payments.
+</p>
+</div>
+
+<div class="section">
+<h2>7. REFUNDS</h2>
+<p>
+Unless otherwise stated on the pricing page or required by applicable
+law, subscription fees are generally non-refundable after the billing
+period begins. Unused subscription time, credits, or generation
+allowances generally have no cash value. Refund requests may be
+considered at LOVIZA's discretion.
+</p>
+</div>
+
+<div class="section">
+<h2>8. FREE TRIALS AND PROMOTIONAL CREDITS</h2>
+<p>
+LOVIZA may offer free trials, promotional credits, discounts,
+or incentives. We may limit eligibility, modify terms, prevent abuse,
+cancel fraudulent or duplicate accounts, or discontinue promotions.
+Promotional credits generally have no cash value unless stated otherwise.
+</p>
+</div>
+
+<div class="section">
+<h2>9. AI-GENERATED CONTENT</h2>
+<p>
+LOVIZA uses AI systems to generate text, images, videos, captions,
+marketing concepts, campaign strategies, recommendations,
+and other creative material.
+</p>
+<p>
+AI outputs may be inaccurate, incomplete, repetitive, biased,
+unsuitable, or similar to content generated for other users.
+</p>
+<p>
 You are responsible for reviewing outputs before using or publishing them.
-LOVIZA does not guarantee that AI-generated content will be factually accurate, original in every respect, legally compliant, suitable for a particular audience, free from third-party rights, or error-free.
-You should independently verify material claims, statistics, legal statements, medical claims, financial claims, advertising claims, and other consequential information.
-10. USER RESPONSIBILITY FOR GENERATED CONTENT
-You are responsible for determining whether generated content is appropriate for your intended use.
-You must not use LOVIZA to generate or distribute content that violates law or third-party rights.
-You are responsible for obtaining necessary permissions for copyrighted materials, trademarks, logos, music, images, videos, fonts, third-party content, personal information, publicity rights, and customer information.
-11. USER CONTENT
-You retain rights in content you upload to LOVIZA, subject to rights necessary for LOVIZA to provide the Service.
-You grant LOVIZA a limited, worldwide, non-exclusive license to host, store, reproduce, transmit, technically modify, process, and display your content solely as reasonably necessary to provide the Service, generate requested outputs, store/manage content, publish content at your direction, provide support, maintain/security the Service, and comply with law.
-This license ends when the relevant content is deleted, except where retention is necessary for legal, security, backup, dispute-resolution, or legitimate operational purposes.
-12. AI SERVICE PROVIDERS
-To provide AI-powered features, LOVIZA may use third-party AI and infrastructure providers. Prompts, brand information, or other content may be transmitted to relevant providers to fulfill requests.
+</p>
+<p>
+LOVIZA does not guarantee that AI-generated content will be factually
+accurate, original in every respect, legally compliant, suitable for
+a particular audience, free from third-party rights, or error-free.
+</p>
+<p>
+You should independently verify material claims, statistics,
+legal statements, medical claims, financial claims, advertising
+claims, and other consequential information.
+</p>
+</div>
+
+<div class="section">
+<h2>10. USER RESPONSIBILITY FOR GENERATED CONTENT</h2>
+<p>
+You are responsible for determining whether generated content
+is appropriate for your intended use.
+</p>
+<p>
+You must not use LOVIZA to generate or distribute content
+that violates law or third-party rights.
+</p>
+<p>
+You are responsible for obtaining necessary permissions for
+copyrighted materials, trademarks, logos, music, images, videos,
+fonts, third-party content, personal information, publicity rights,
+and customer information.
+</p>
+</div>
+
+<div class="section">
+<h2>11. USER CONTENT</h2>
+<p>
+You retain rights in content you upload to LOVIZA, subject to
+rights necessary for LOVIZA to provide the Service.
+</p>
+<p>
+You grant LOVIZA a limited, worldwide, non-exclusive license to host,
+store, reproduce, transmit, technically modify, process, and display
+your content solely as reasonably necessary to provide the Service,
+generate requested outputs, store/manage content, publish content
+at your direction, provide support, maintain/security the Service,
+and comply with law.
+</p>
+<p>
+This license ends when the relevant content is deleted, except where
+retention is necessary for legal, security, backup, dispute-resolution,
+or legitimate operational purposes.
+</p>
+</div>
+
+<div class="section">
+<h2>12. AI SERVICE PROVIDERS</h2>
+<p>
+To provide AI-powered features, LOVIZA may use third-party AI and
+infrastructure providers. Prompts, brand information, or other content
+may be transmitted to relevant providers to fulfill requests.
+</p>
+<p>
 You authorize such processing as necessary to provide the Service.
-13. SOCIAL-MEDIA INTEGRATIONS
-LOVIZA may integrate with LinkedIn, YouTube, Instagram, Facebook, Google, and other supported services.
-When you connect an account, you authorize LOVIZA to perform actions permitted by the permissions you grant.
-You are responsible for ensuring that you own/control the account, have authority to publish, comply with platform rules, comply with applicable laws, and do not engage in spam or abuse.
-Third-party platforms may modify or revoke APIs, permissions, functionality, rate limits, or access without notice to LOVIZA. LOVIZA does not guarantee uninterrupted availability of third-party integrations.
-14. AUTOMATED PUBLISHING
-If enabled, LOVIZA may publish content according to your schedule, instructions, campaign configuration, and connected-platform permissions.
-Automated publishing may be affected by API failures, rate limits, platform outages, expired authentication, scheduling conflicts, moderation, API changes, technical failures, or incorrect configuration.
-LOVIZA is not responsible for third-party decisions to reject, remove, restrict, flag, or modify published content. You remain responsible for monitoring automated campaigns.
-15. PROHIBITED USES
-You may not use LOVIZA to:
-1. Violate applicable law.
-2. Infringe intellectual-property rights.
-3. Commit fraud or deception.
-4. Distribute malware or malicious code.
-5. Attempt unauthorized access.
-6. Circumvent security controls.
-7. Abuse APIs or rate limits.
-8. Scrape LOVIZA without authorization.
-9. Reverse engineer the Service except where legally permitted.
-10. Resell or sublicense LOVIZA without authorization.
-11. Generate spam or abusive automated communications.
-12. Harass, threaten, defame, or impersonate individuals.
-13. Generate content intended to facilitate illegal activities.
-14. Upload personal information without an appropriate legal basis or authorization.
-15. Use the Service for high-impact decisions about individuals without appropriate safeguards.
-16. Use LOVIZA in a way reasonably likely to cause significant harm.
-17. Interfere with LOVIZA's operation.
-18. Circumvent subscription limits, credits, quotas, or technical restrictions.
-16. INTELLECTUAL PROPERTY
-LOVIZA and its underlying technology, software, interfaces, designs, trademarks, logos, documentation, and proprietary systems are owned by or licensed to LOVIZA.
-Except for rights expressly granted under these Terms, no ownership rights are transferred to you.
-17. YOUR CONTENT AND LOVIZA CONTENT
-You retain ownership of your pre-existing materials and content you provide to LOVIZA.
-To the extent permitted by applicable law and subject to third-party AI-provider terms, LOVIZA does not claim ownership of content generated specifically for you merely because you generated it through LOVIZA.
-However, similar or identical AI outputs may be generated for different users. LOVIZA does not guarantee exclusive ownership or exclusivity of AI-generated output.
-18. FEEDBACK
-If you provide suggestions, ideas, recommendations, or feedback regarding LOVIZA, you grant LOVIZA the right to use that feedback without compensation or restriction.
-19. CONFIDENTIALITY
-Each party may receive confidential information from the other. The receiving party agrees to use reasonable measures to protect confidential information and use it only for purposes related to the relationship.
-Confidential information excludes information that is public, already lawfully known, independently developed, lawfully received from another source, or required to be disclosed by law.
-20. SERVICE AVAILABILITY
-LOVIZA will use commercially reasonable efforts to maintain the Service. However, we do not guarantee that LOVIZA will be available at all times, error-free, uninterrupted, free from vulnerabilities, compatible with every device, or indefinitely compatible with every third-party platform.
-Maintenance, upgrades, outages, security incidents, third-party failures, and circumstances beyond reasonable control may affect availability.
-21. THIRD-PARTY SERVICES
-LOVIZA may depend on cloud providers, AI providers, payment providers, authentication providers, social-media platforms, analytics providers, email providers, storage providers, and other third parties.
-Third-party services are subject to their own terms and policies. LOVIZA is not responsible for failures caused exclusively by third-party services.
-22. DISCLAIMERS
-To the maximum extent permitted by applicable law, LOVIZA is provided on an "as is" and "as available" basis.
-LOVIZA does not warrant that AI outputs will be accurate, marketing results will be achieved, content will generate sales/leads/engagement/revenue, social-media posts will be approved, third-party platforms will remain available, generated content will be free from intellectual-property claims, or the Service will meet every business requirement.
-LOVIZA is a software and marketing-automation tool and does not guarantee any specific commercial outcome.
-23. LIMITATION OF LIABILITY
-To the maximum extent permitted by applicable law, LOVIZA and its owners, officers, employees, affiliates, contractors, and service providers will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, including loss of profits, revenue, business opportunities, customers, data, reputation, or goodwill.
-To the maximum extent permitted by law, LOVIZA's aggregate liability arising from or relating to the Service will not exceed the amount actually paid by you to LOVIZA for the Service during the 12 months preceding the event giving rise to the claim.
+</p>
+</div>
+
+<div class="section">
+<h2>13. SOCIAL-MEDIA INTEGRATIONS</h2>
+<p>
+LOVIZA may integrate with LinkedIn, YouTube, Instagram, Facebook,
+Google, and other supported services.
+</p>
+<p>
+When you connect an account, you authorize LOVIZA to perform actions
+permitted by the permissions you grant.
+</p>
+<p>
+You are responsible for ensuring that you own/control the account,
+have authority to publish, comply with platform rules, comply with
+applicable laws, and do not engage in spam or abuse.
+</p>
+<p>
+Third-party platforms may modify or revoke APIs, permissions,
+functionality, rate limits, or access without notice to LOVIZA.
+LOVIZA does not guarantee uninterrupted availability of
+third-party integrations.
+</p>
+</div>
+
+<div class="section">
+<h2>14. AUTOMATED PUBLISHING</h2>
+<p>
+If enabled, LOVIZA may publish content according to your schedule,
+instructions, campaign configuration, and connected-platform permissions.
+</p>
+<p>
+Automated publishing may be affected by API failures, rate limits,
+platform outages, expired authentication, scheduling conflicts,
+moderation, API changes, technical failures, or incorrect configuration.
+</p>
+<p>
+LOVIZA is not responsible for third-party decisions to reject,
+remove, restrict, flag, or modify published content.
+You remain responsible for monitoring automated campaigns.
+</p>
+</div>
+
+<div class="section">
+<h2>15. PROHIBITED USES</h2>
+<p>You may not use LOVIZA to:</p>
+<ol>
+    <li>Violate applicable law.</li>
+    <li>Infringe intellectual-property rights.</li>
+    <li>Commit fraud or deception.</li>
+    <li>Distribute malware or malicious code.</li>
+    <li>Attempt unauthorized access.</li>
+    <li>Circumvent security controls.</li>
+    <li>Abuse APIs or rate limits.</li>
+    <li>Scrape LOVIZA without authorization.</li>
+    <li>Reverse engineer the Service except where legally permitted.</li>
+    <li>Resell or sublicense LOVIZA without authorization.</li>
+    <li>Generate spam or abusive automated communications.</li>
+    <li>Harass, threaten, defame, or impersonate individuals.</li>
+    <li>Generate content intended to facilitate illegal activities.</li>
+    <li>Upload personal information without an appropriate legal basis or authorization.</li>
+    <li>Use the Service for high-impact decisions about individuals without appropriate safeguards.</li>
+    <li>Use LOVIZA in a way reasonably likely to cause significant harm.</li>
+    <li>Interfere with LOVIZA's operation.</li>
+    <li>Circumvent subscription limits, credits, quotas, or technical restrictions.</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>16. INTELLECTUAL PROPERTY</h2>
+<p>
+LOVIZA and its underlying technology, software, interfaces,
+designs, trademarks, logos, documentation, and proprietary systems
+are owned by or licensed to LOVIZA.
+</p>
+<p>
+Except for rights expressly granted under these Terms,
+no ownership rights are transferred to you.
+</p>
+</div>
+
+<div class="section">
+<h2>17. YOUR CONTENT AND LOVIZA CONTENT</h2>
+<p>
+You retain ownership of your pre-existing materials and content
+you provide to LOVIZA.
+</p>
+<p>
+To the extent permitted by applicable law and subject to third-party
+AI-provider terms, LOVIZA does not claim ownership of content
+generated specifically for you merely because you generated it
+through LOVIZA.
+</p>
+<p>
+However, similar or identical AI outputs may be generated for
+different users. LOVIZA does not guarantee exclusive ownership
+or exclusivity of AI-generated output.
+</p>
+</div>
+
+<div class="section">
+<h2>18. FEEDBACK</h2>
+<p>
+If you provide suggestions, ideas, recommendations, or feedback
+regarding LOVIZA, you grant LOVIZA the right to use that feedback
+without compensation or restriction.
+</p>
+</div>
+
+<div class="section">
+<h2>19. CONFIDENTIALITY</h2>
+<p>
+Each party may receive confidential information from the other.
+The receiving party agrees to use reasonable measures to protect
+confidential information and use it only for purposes related
+to the relationship.
+</p>
+<p>
+Confidential information excludes information that is public,
+already lawfully known, independently developed, lawfully received
+from another source, or required to be disclosed by law.
+</p>
+</div>
+
+<div class="section">
+<h2>20. SERVICE AVAILABILITY</h2>
+<p>
+LOVIZA will use commercially reasonable efforts to maintain the Service.
+However, we do not guarantee that LOVIZA will be available at all times,
+error-free, uninterrupted, free from vulnerabilities, compatible with
+every device, or indefinitely compatible with every third-party platform.
+</p>
+<p>
+Maintenance, upgrades, outages, security incidents, third-party failures,
+and circumstances beyond reasonable control may affect availability.
+</p>
+</div>
+
+<div class="section">
+<h2>21. THIRD-PARTY SERVICES</h2>
+<p>
+LOVIZA may depend on cloud providers, AI providers, payment providers,
+authentication providers, social-media platforms, analytics providers,
+email providers, storage providers, and other third parties.
+</p>
+<p>
+Third-party services are subject to their own terms and policies.
+LOVIZA is not responsible for failures caused exclusively
+by third-party services.
+</p>
+</div>
+
+<div class="section">
+<h2>22. DISCLAIMERS</h2>
+<p>
+To the maximum extent permitted by applicable law, LOVIZA is provided
+on an "as is" and "as available" basis.
+</p>
+<p>
+LOVIZA does not warrant that AI outputs will be accurate, marketing
+results will be achieved, content will generate sales/leads/engagement/
+revenue, social-media posts will be approved, third-party platforms
+will remain available, generated content will be free from
+intellectual-property claims, or the Service will meet every
+business requirement.
+</p>
+<p>
+LOVIZA is a software and marketing-automation tool and does not
+guarantee any specific commercial outcome.
+</p>
+</div>
+
+<div class="section">
+<h2>23. LIMITATION OF LIABILITY</h2>
+<p>
+To the maximum extent permitted by applicable law, LOVIZA and its owners,
+officers, employees, affiliates, contractors, and service providers
+will not be liable for indirect, incidental, special, consequential,
+exemplary, or punitive damages, including loss of profits, revenue,
+business opportunities, customers, data, reputation, or goodwill.
+</p>
+<p>
+To the maximum extent permitted by law, LOVIZA's aggregate liability
+arising from or relating to the Service will not exceed the amount
+actually paid by you to LOVIZA for the Service during the 12 months
+preceding the event giving rise to the claim.
+</p>
+<p>
 Nothing excludes liability that cannot legally be excluded or limited.
-24. INDEMNIFICATION
-To the extent permitted by applicable law, you agree to defend, indemnify, and hold harmless LOVIZA and its owners, officers, employees, affiliates, and service providers from claims, losses, liabilities, damages, costs, and expenses arising from your misuse of the Service, violation of these Terms or law, infringement of third-party rights, content you provide or publish, unauthorized use of connected accounts, or failure to obtain required permissions/consents.
-25. SUSPENSION AND TERMINATION
-You may stop using LOVIZA at any time.
-LOVIZA may suspend or terminate your account if you materially breach these Terms, engage in fraud or abuse, create a security risk, fail to pay fees, create legal or operational risk, are required to do so by law, or if the relevant Service is discontinued.
-Where reasonably practicable, we may provide notice and an opportunity to remedy a violation.
-26. EFFECT OF TERMINATION
-Upon termination, your right to access the Service may end, scheduled publishing may stop, social-media permissions may cease, the account may be deactivated, and information may be retained as required or permitted by law.
-Third-party content already published through social-media platforms will not necessarily be deleted when your LOVIZA account is terminated.
-27. DATA AND PRIVACY
-Your use of LOVIZA is also governed by our Privacy Policy, which explains how we collect, process, store, use, and protect personal information.
-28. CHANGES TO THE SERVICE
-LOVIZA may modify, improve, add, remove, or discontinue features. Where reasonably practicable, material changes affecting paid services will be communicated in advance.
-29. CHANGES TO THESE TERMS
-We may update these Terms from time to time. If material changes are made, we may notify users through the Service, email, or another reasonable method.
-Continued use after the effective date of updated Terms constitutes acceptance to the extent permitted by applicable law.
-30. GOVERNING LAW
-These Terms shall be governed by the laws of India, unless applicable law requires otherwise.
-Subject to applicable law, disputes shall be subject to the jurisdiction of the courts located in Nagpur,Maharashtra,India.
-31. DISPUTE RESOLUTION
-Before initiating formal proceedings, the parties should attempt in good faith to resolve disputes by contacting LOVIZA at shashank.bawane@gmail.com.
-If the dispute cannot be resolved informally, it may be referred to the courts or another dispute-resolution mechanism specified by applicable law.
-32. FORCE MAJEURE
-LOVIZA will not be responsible for delays or failures caused by circumstances beyond reasonable control, including natural disasters, internet failures, cloud-provider outages, cyberattacks, government actions, war, civil unrest, strikes, power failures, telecommunications failures, third-party platform outages, changes to third-party APIs, or other events beyond reasonable control.
-33. ASSIGNMENT
-You may not transfer your rights or obligations under these Terms without prior written consent, except where permitted by law.
-LOVIZA may assign these Terms in connection with a merger, acquisition, restructuring, financing, sale of assets, or transfer of the Service.
-34. SEVERABILITY
-If any provision is invalid or unenforceable, the remaining provisions continue to apply to the extent permitted by law.
-35. ENTIRE AGREEMENT
-These Terms, together with the Privacy Policy and applicable subscription/order terms, constitute the agreement between you and LOVIZA regarding use of the Service.
-36. CONTACT
-LOVIZA
-Legal Entity: Sharidhs Tech Solutions
-Address: Nagpur
-Email: shashank.bawane@gmail.com
-Website: loviza.click
-37. ACCEPTANCE
-By clicking "I Agree", creating an account, subscribing to LOVIZA, or using the Service, you acknowledge that you have read, understood, and agreed to these Terms.
-Last Updated: 29 AUG 2026
+</p>
+</div>
+
+<div class="section">
+<h2>24. INDEMNIFICATION</h2>
+<p>
+To the extent permitted by applicable law, you agree to defend,
+indemnify, and hold harmless LOVIZA and its owners, officers,
+employees, affiliates, and service providers from claims, losses,
+liabilities, damages, costs, and expenses arising from your misuse
+of the Service, violation of these Terms or law, infringement
+of third-party rights, content you provide or publish, unauthorized
+use of connected accounts, or failure to obtain required
+permissions/consents.
+</p>
+</div>
+
+<div class="section">
+<h2>25. SUSPENSION AND TERMINATION</h2>
+<p>You may stop using LOVIZA at any time.</p>
+<p>
+LOVIZA may suspend or terminate your account if you materially
+breach these Terms, engage in fraud or abuse, create a security risk,
+fail to pay fees, create legal or operational risk, are required
+to do so by law, or if the relevant Service is discontinued.
+</p>
+<p>
+Where reasonably practicable, we may provide notice and an
+opportunity to remedy a violation.
+</p>
+</div>
+
+<div class="section">
+<h2>26. EFFECT OF TERMINATION</h2>
+<p>
+Upon termination, your right to access the Service may end,
+scheduled publishing may stop, social-media permissions may cease,
+the account may be deactivated, and information may be retained
+as required or permitted by law.
+</p>
+<p>
+Third-party content already published through social-media platforms
+will not necessarily be deleted when your LOVIZA account is terminated.
+</p>
+</div>
+
+<div class="section">
+<h2>27. DATA AND PRIVACY</h2>
+<p>
+Your use of LOVIZA is also governed by our Privacy Policy,
+which explains how we collect, process, store, use, and protect
+personal information.
+</p>
+</div>
+
+<div class="section">
+<h2>28. CHANGES TO THE SERVICE</h2>
+<p>
+LOVIZA may modify, improve, add, remove, or discontinue features.
+Where reasonably practicable, material changes affecting paid
+services will be communicated in advance.
+</p>
+</div>
+
+<div class="section">
+<h2>29. CHANGES TO THESE TERMS</h2>
+<p>
+We may update these Terms from time to time. If material changes
+are made, we may notify users through the Service, email,
+or another reasonable method.
+</p>
+<p>
+Continued use after the effective date of updated Terms constitutes
+acceptance to the extent permitted by applicable law.
+</p>
+</div>
+
+<div class="section">
+<h2>30. GOVERNING LAW</h2>
+<p>
+These Terms shall be governed by the laws of India,
+unless applicable law requires otherwise.
+</p>
+<p>
+Subject to applicable law, disputes shall be subject to the
+jurisdiction of the courts located in Nagpur, Maharashtra, India.
+</p>
+</div>
+
+<div class="section">
+<h2>31. DISPUTE RESOLUTION</h2>
+<p>
+Before initiating formal proceedings, the parties should attempt
+in good faith to resolve disputes by contacting LOVIZA at:
+</p>
+<p>
+<strong>
+<a href="mailto:shashank.bawane@gmail.com">
+shashank.bawane@gmail.com
+</a>
+</strong>
+</p>
+<p>
+If the dispute cannot be resolved informally, it may be referred
+to the courts or another dispute-resolution mechanism specified
+by applicable law.
+</p>
+</div>
+
+<div class="section">
+<h2>32. FORCE MAJEURE</h2>
+<p>
+LOVIZA will not be responsible for delays or failures caused by
+circumstances beyond reasonable control, including natural disasters,
+internet failures, cloud-provider outages, cyberattacks, government
+actions, war, civil unrest, strikes, power failures, telecommunications
+failures, third-party platform outages, changes to third-party APIs,
+or other events beyond reasonable control.
+</p>
+</div>
+
+<div class="section">
+<h2>33. ASSIGNMENT</h2>
+<p>
+You may not transfer your rights or obligations under these Terms
+without prior written consent, except where permitted by law.
+</p>
+<p>
+LOVIZA may assign these Terms in connection with a merger,
+acquisition, restructuring, financing, sale of assets,
+or transfer of the Service.
+</p>
+</div>
+
+<div class="section">
+<h2>34. SEVERABILITY</h2>
+<p>
+If any provision is invalid or unenforceable, the remaining
+provisions continue to apply to the extent permitted by law.
+</p>
+</div>
+
+<div class="section">
+<h2>35. ENTIRE AGREEMENT</h2>
+<p>
+These Terms, together with the Privacy Policy and applicable
+subscription/order terms, constitute the agreement between you
+and LOVIZA regarding use of the Service.
+</p>
+</div>
+
+<div class="section">
+<h2>36. CONTACT</h2>
+<p><strong>LOVIZA</strong></p>
+<p>Legal Entity: Sharidhs Tech Solutions</p>
+<p>Address: Nagpur</p>
+<p>
+Email:
+<a href="mailto:shashank.bawane@gmail.com">
+shashank.bawane@gmail.com
+</a>
+</p>
+<p>
+Website:
+<a href="https://loviza.click">
+loviza.click
+</a>
+</p>
+</div>
+
+<div class="section">
+<h2>37. ACCEPTANCE</h2>
+<p>
+By clicking "I Agree", creating an account, subscribing to LOVIZA,
+or using the Service, you acknowledge that you have read,
+understood, and agreed to these Terms.
+</p>
+</div>
+
+<p style="margin-top:35px; font-size:13px; color:#777;">
+    Last Updated: 29 August 2026
+</p>
+
+</main>
+
+<footer>
+    <p>
+        &copy; 2026 <span>LOVIZA</span>.
+        All Rights Reserved.
+    </p>
+    <p>Powered by Sharidhs Tech Solutions</p>
+</footer>
+
+</body>
+</html>
