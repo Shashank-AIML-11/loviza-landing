@@ -25,7 +25,9 @@ export interface PlanMonthlyContent {
 export interface Plan {
   id: PlanId;
   name: string;
-  priceMonthly: number; // INR, whole rupees - must match the amount on the corresponding Razorpay Plan (RAZORPAY_PLAN_STARTER / _GROWTH / _SCALE)
+  priceMonthly: number; // INR, whole rupees, for one month paid monthly
+  /** INR per month when the customer pays for the whole year up front (40% below priceMonthly). */
+  priceAnnualPerMonth: number;
   tagline: string;
   highlight?: boolean;
   features: string[];
@@ -46,14 +48,16 @@ export const PLANS: Plan[] = [
   {
     id: "starter",
     name: "Starter",
-    priceMonthly: 1499,
+    priceMonthly: 2499,
+    priceAnnualPerMonth: 1499,
     tagline: "For solo founders testing the water.",
     features: [
       "1 brand profile",
-      "23 pieces of content per month",
-      "Blog, LinkedIn, Instagram, Facebook, X, Pinterest, carousels",
+      "44 pieces of content per month",
+      "Blog, posts, reels, video posts, shorts, carousels",
       "1 Reel, Short, TikTok & product video per month",
       "2 social channels",
+      "Performance analytics",
       "Email support",
     ],
     monthlyContent: {
@@ -78,17 +82,16 @@ export const PLANS: Plan[] = [
   {
     id: "growth",
     name: "Growth",
-    priceMonthly: 2499,
+    priceMonthly: 4165,
+    priceAnnualPerMonth: 2499,
     tagline: "Auto-posting across every channel.",
     highlight: true,
     features: [
       "2 brand profiles",
-      "36 pieces of content per month",
-      "Blog, LinkedIn, Instagram, Facebook, X, Pinterest, carousels",
-      "2 Reels, Shorts, TikToks & product videos per month",
+      "44 pieces of content per month",
+      "Blog, posts, reels, video posts, shorts, carousels",
       "Auto-schedule & auto-posting",
-      "All social channels",
-      "Google Drive sync",
+      "5 social channels",
       "Performance analytics",
       "Priority support",
     ],
@@ -114,17 +117,17 @@ export const PLANS: Plan[] = [
   {
     id: "scale",
     name: "Scale",
-    priceMonthly: 24999,
+    priceMonthly: 41665,
+    priceAnnualPerMonth: 24999,
     tagline: "Agencies running many brands at once.",
     features: [
       "20 brand profiles",
-      "36 pieces of content per brand, per month",
-      "Blog, LinkedIn, Instagram, Facebook, X, Pinterest, carousels",
-      "2 Reels, Shorts, TikToks & product videos per brand",
+      "44 pieces of content per month",
+      "Blog, posts, reels, video posts, shorts, carousels",
       "Auto-schedule & auto-posting",
-      "All social channels",
+      "11 social channels",
       "Google Drive sync",
-      "Advanced analytics",
+      "Advanced performance analytics",
       "Dedicated support manager",
     ],
     // Per-brand quota - see the multi-brand-profile note below before this is
@@ -149,6 +152,36 @@ export const PLANS: Plan[] = [
     support: "dedicated",
   },
 ];
+
+export type BillingCycle = "monthly" | "annual";
+
+/** Shown on the Annual option. 2,499 -> 1,499 per month is 40% off. */
+export const ANNUAL_DISCOUNT_PERCENT = 40;
+export const MONTHLY_PERIOD_DAYS = 30;
+export const ANNUAL_PERIOD_DAYS = 365;
+
+export function parseBillingCycle(value: unknown): BillingCycle {
+  return value === "annual" ? "annual" : "monthly";
+}
+
+export function periodDaysFor(cycle: BillingCycle): number {
+  return cycle === "annual" ? ANNUAL_PERIOD_DAYS : MONTHLY_PERIOD_DAYS;
+}
+
+/** What the customer pays in one go, in whole rupees (annual = 12 months paid up front). */
+export function planTotalInr(plan: Plan, cycle: BillingCycle): number {
+  return cycle === "annual" ? plan.priceAnnualPerMonth * 12 : plan.priceMonthly;
+}
+
+/** The per-month figure to show on a card for this cycle. */
+export function planPerMonthInr(plan: Plan, cycle: BillingCycle): number {
+  return cycle === "annual" ? plan.priceAnnualPerMonth : plan.priceMonthly;
+}
+
+/** What the customer saves over a year by paying annually, in whole rupees. */
+export function annualSavingInr(plan: Plan): number {
+  return plan.priceMonthly * 12 - plan.priceAnnualPerMonth * 12;
+}
 
 export function planById(id: string | null | undefined): Plan | undefined {
   return PLANS.find((p) => p.id === id);

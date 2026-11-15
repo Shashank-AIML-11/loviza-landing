@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Check, ArrowRight } from "lucide-react";
-import { formatINR, PLANS } from "../../lib/plans";
+import {
+  ANNUAL_DISCOUNT_PERCENT,
+  annualSavingInr,
+  formatINR,
+  planPerMonthInr,
+  planTotalInr,
+  PLANS,
+  type BillingCycle,
+} from "../../lib/plans";
 import { APP_URL } from "../../lib/config";
 import { playClickSound } from "./audio";
 
@@ -12,6 +20,30 @@ import { playClickSound } from "./audio";
  * Razorpay plans - so the landing page can never drift from what is billed.
  */
 export const PricingSection: React.FC = () => {
+  const [cycle, setCycle] = useState<BillingCycle>("monthly");
+  const toggleButton = (value: BillingCycle, label: string) => (
+    <button
+      type="button"
+      role="radio"
+      aria-checked={cycle === value}
+      onClick={() => setCycle(value)}
+      className={`flex items-center gap-2 rounded-full px-5 py-2 text-sm font-bold transition-colors cursor-pointer ${
+        cycle === value ? "bg-primary text-black" : "text-zinc-400 hover:text-white"
+      }`}
+    >
+      {label}
+      {value === "annual" && (
+        <span
+          className={`rounded-full px-2 py-0.5 text-[10px] font-black uppercase tracking-wide ${
+            cycle === "annual" ? "bg-black/20 text-black" : "bg-primary/20 text-primary"
+          }`}
+        >
+          Save {ANNUAL_DISCOUNT_PERCENT}%
+        </span>
+      )}
+    </button>
+  );
+
   return (
     <section
       id="pricing"
@@ -26,6 +58,14 @@ export const PricingSection: React.FC = () => {
           <p className="mt-4 text-zinc-400 text-sm sm:text-base leading-relaxed">
             Upgrade or downgrade at any time.
           </p>
+          <div
+            role="radiogroup"
+            aria-label="Billing period"
+            className="mt-8 inline-flex items-center gap-1 rounded-full border border-zinc-800 bg-zinc-950 p-1"
+          >
+            {toggleButton("monthly", "Monthly")}
+            {toggleButton("annual", "Annual")}
+          </div>
         </div>
 
         {/* Pricing Cards Grid */}
@@ -56,11 +96,23 @@ export const PricingSection: React.FC = () => {
                   </p>
 
                   {/* Price */}
-                  <div className="my-6 pb-6 border-b border-zinc-800 flex items-baseline gap-1">
-                    <span className="text-4xl font-black text-white">
-                      {formatINR(plan.priceMonthly)}
-                    </span>
-                    <span className="text-sm text-zinc-500">/month</span>
+                  <div className="my-6 pb-6 border-b border-zinc-800">
+                    <div className="flex items-baseline gap-1">
+                      {cycle === "annual" && (
+                        <span className="mr-1 text-lg font-semibold text-zinc-500 line-through">
+                          {formatINR(plan.priceMonthly)}
+                        </span>
+                      )}
+                      <span className="text-4xl font-black text-white">
+                        {formatINR(planPerMonthInr(plan, cycle))}
+                      </span>
+                      <span className="text-sm text-zinc-500">/month</span>
+                    </div>
+                    <p className="mt-2 min-h-[1.25rem] text-xs text-zinc-500">
+                      {cycle === "annual"
+                        ? `Billed ${formatINR(planTotalInr(plan, "annual"))} once a year. You save ${formatINR(annualSavingInr(plan))}.`
+                        : "Billed monthly."}
+                    </p>
                   </div>
 
                   {/* Features List */}
@@ -76,7 +128,7 @@ export const PricingSection: React.FC = () => {
 
                 {/* CTA: sends visitors to sign in on the app, then on to pricing/checkout */}
                 <a
-                  href={`${APP_URL}/auth?redirect=%2Fpricing`}
+                  href={`${APP_URL}/auth?redirect=${encodeURIComponent(cycle === "annual" ? "/pricing?cycle=annual" : "/pricing")}`}
                   onClick={playClickSound}
                   className={`w-full py-3.5 px-4 rounded-xl text-xs font-black uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer shadow-lg active:scale-95 ${
                     isPopular
