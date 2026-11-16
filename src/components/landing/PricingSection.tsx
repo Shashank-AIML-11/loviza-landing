@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Check, ArrowRight } from "lucide-react";
+import { Check, ArrowRight, Sparkles } from "lucide-react";
 import {
   ANNUAL_DISCOUNT_PERCENT,
   annualSavingInr,
@@ -55,8 +55,21 @@ export const PricingSection: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight [text-wrap:balance]">
             Pick your plan
           </h2>
+          <div className="mt-4 flex items-center justify-center gap-3 text-xs font-bold uppercase tracking-wider text-zinc-500">
+            <span className="h-px w-10 bg-zinc-800" />
+            or
+            <span className="h-px w-10 bg-zinc-800" />
+          </div>
+          <a
+            href={`${APP_URL}/pricing?onetime=1`}
+            onClick={playClickSound}
+            className="mt-4 inline-flex items-center justify-center gap-2 rounded-xl border border-zinc-700 bg-zinc-900 px-5 py-3 text-xs font-black uppercase tracking-wider text-white transition-colors hover:bg-zinc-800 cursor-pointer"
+          >
+            <Sparkles className="w-4 h-4 text-primary" />
+            <span>Generate One Time with {formatINR(300)}</span>
+          </a>
           <p className="mt-4 text-zinc-400 text-sm sm:text-base leading-relaxed">
-            Upgrade or downgrade at any time.
+            Upgrade or downgrade at any time. One-time covers this week's content only.
           </p>
           <div
             role="radiogroup"
@@ -128,7 +141,7 @@ export const PricingSection: React.FC = () => {
 
                 {/* CTA: sends visitors to sign in on the app, then on to pricing/checkout */}
                 <a
-                  href={`${APP_URL}/auth?redirect=${encodeURIComponent(cycle === "annual" ? "/pricing?cycle=annual" : "/pricing")}`}
+                  href={cycle === "annual" ? `${APP_URL}/pricing?cycle=annual` : `${APP_URL}/auth?redirect=%2Fpricing`}
                   onClick={playClickSound}
                   className={`w-full py-3.5 px-4 rounded-xl text-xs font-black uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer shadow-lg active:scale-95 ${
                     isPopular
