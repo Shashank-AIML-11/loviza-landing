@@ -52,22 +52,23 @@ export const PricingSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-14">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight [text-wrap:balance]">
-            Pick your plan
-          </h2>
-          <div className="mt-4 flex items-center justify-center gap-3 text-xs font-bold uppercase tracking-wider text-zinc-500">
-            <span className="h-px w-10 bg-zinc-800" />
-            or
-            <span className="h-px w-10 bg-zinc-800" />
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-3">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight [text-wrap:balance]">
+              Pick your plan
+            </h2>
+            <span className="text-xs font-bold uppercase tracking-wider text-zinc-500">or</span>
+            <a
+              href={`${APP_URL}/pricing?onetime=1`}
+              onClick={playClickSound}
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-xs font-black uppercase tracking-wider text-black shadow-lg shadow-primary/25 transition-all duration-200 hover:bg-primary-light active:scale-95 cursor-pointer"
+            >
+              <Sparkles className="w-4 h-4" />
+              <span>Generate One Time with {formatINR(300)}</span>
+            </a>
           </div>
-          <a
-            href={`${APP_URL}/pricing?onetime=1`}
-            onClick={playClickSound}
-            className="mt-4 inline-flex items-center justify-center gap-2 rounded-xl border border-zinc-700 bg-zinc-900 px-5 py-3 text-xs font-black uppercase tracking-wider text-white transition-colors hover:bg-zinc-800 cursor-pointer"
-          >
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span>Generate One Time with {formatINR(300)}</span>
-          </a>
+          <p className="mt-4 text-zinc-400 text-sm sm:text-base leading-relaxed">
+            Upgrade or downgrade at any time. One-time covers this week's content only.
+          </p>
           <div
             role="radiogroup"
             aria-label="Billing period"
