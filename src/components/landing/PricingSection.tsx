@@ -68,9 +68,6 @@ export const PricingSection: React.FC = () => {
             <Sparkles className="w-4 h-4 text-primary" />
             <span>Generate One Time with {formatINR(300)}</span>
           </a>
-          <p className="mt-4 text-zinc-400 text-sm sm:text-base leading-relaxed">
-            Upgrade or downgrade at any time. One-time covers this week's content only.
-          </p>
           <div
             role="radiogroup"
             aria-label="Billing period"
