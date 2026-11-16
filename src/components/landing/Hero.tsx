@@ -222,7 +222,7 @@ export const Hero: React.FC<HeroProps> = () => {
               {/* Status footer */}
               <div className="pt-3 border-t border-zinc-900 flex items-center justify-between text-xs">
                 <span className="text-zinc-500 font-medium">Daily Production:</span>
-                <span className="font-mono font-bold text-primary">4-6 Videos / Day Auto-Distributed</span>
+                <span className="font-mono font-bold text-primary"> Auto-Distributed</span>
               </div>
             </div>
 
