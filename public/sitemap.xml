@@ -5,4 +5,44 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://loviza.click/privacy/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://loviza.click/terms/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://loviza.click/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://loviza.click/blog/30-day-loviza-playbook.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://loviza.click/blog/the-overnight-effect.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://loviza.click/blog/brand-voice-at-scale.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://loviza.click/blog/why-your-posting-schedule-is-guessing.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://loviza.click/blog/content-team-you-dont-have-to-hire.html</loc>
+    <lastmod>2026-05-04</lastmod>
+    <priority>0.6</priority>
+  </url>
 </urlset>

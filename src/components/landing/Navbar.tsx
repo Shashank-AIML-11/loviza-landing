@@ -37,6 +37,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGetStarted }) => {
           >
             Pricing
           </a>
+          <a
+            href="/blog/"
+            className="hover:text-primary transition-colors duration-150 py-1"
+            onClick={() => playClickSound()}
+          >
+            Blog
+          </a>
           <a 
             href="#faq" 
             className="hover:text-primary transition-colors duration-150 py-1"
@@ -94,6 +101,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGetStarted }) => {
             className="block py-2 text-sm font-medium text-zinc-200 hover:text-primary"
           >
             Pricing
+          </a>
+          <a
+            href="/blog/"
+            onClick={() => { playClickSound(); setMobileMenuOpen(false); }}
+            className="block py-2 text-sm font-medium text-zinc-200 hover:text-primary"
+          >
+            Blog
           </a>
           <a
             href="#faq"
