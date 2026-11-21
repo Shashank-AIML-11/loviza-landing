@@ -45,8 +45,8 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li><a href="#" onClick={playClickSound} className="hover:text-primary transition-colors">Brand DNA Protection</a></li>
               <li><a href="/blog/" onClick={playClickSound} className="hover:text-primary transition-colors">Blog</a></li>
-              <li><a href="/terms/" onClick={playClickSound} className="hover:text-primary transition-colors">Terms of Service</a></li>
-              <li><a href="/privacy/" onClick={playClickSound} className="hover:text-primary transition-colors">Privacy Policy</a></li>
+              <li><a href="/terms-of-service.html" onClick={playClickSound} className="hover:text-primary transition-colors">Terms of Service</a></li>
+              <li><a href="/privacy-policy.html" onClick={playClickSound} className="hover:text-primary transition-colors">Privacy Policy</a></li>
               <li><a href="#" onClick={playClickSound} className="hover:text-primary transition-colors">Commercial Rights</a></li>
               <li><a href="#" onClick={playClickSound} className="hover:text-primary transition-colors"></a></li>
             </ul>
