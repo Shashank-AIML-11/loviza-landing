@@ -33,10 +33,10 @@
 }
 
 @theme inline {
-  /* One native system stack everywhere (no webfont download). `font-mono`
-     intentionally maps to it too, so the whole site uses a single typeface. */
+  /* One typeface everywhere (DM Sans, same as the app); the system stack is the fallback while
+     it loads. `font-mono` maps to it too, so the whole site uses a single typeface. */
   --font-sans:
-    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "DM Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   --font-display: var(--font-sans);
   --font-mono: var(--font-sans);
@@ -181,6 +181,8 @@
 
   html {
     color-scheme: dark;
+    /* Same proportions as viewing the page at 90% browser zoom. */
+    font-size: 90%;
   }
 
   body {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Check, ArrowRight, Sparkles } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 import {
   ANNUAL_DISCOUNT_PERCENT,
   annualSavingInr,
@@ -20,7 +20,7 @@ import { playClickSound } from "./audio";
  * Razorpay plans - so the landing page can never drift from what is billed.
  */
 export const PricingSection: React.FC = () => {
-  const [cycle, setCycle] = useState<BillingCycle>("monthly");
+  const [cycle, setCycle] = useState<BillingCycle>("annual");
   const toggleButton = (value: BillingCycle, label: string) => (
     <button
       type="button"
@@ -62,8 +62,7 @@ export const PricingSection: React.FC = () => {
               onClick={playClickSound}
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-xs font-black uppercase tracking-wider text-black shadow-lg shadow-primary/25 transition-all duration-200 hover:bg-primary-light active:scale-95 cursor-pointer"
             >
-              <Sparkles className="w-4 h-4" />
-              <span>Generate One Time with {formatINR(300)}</span>
+              <span>Generate One Time with {formatINR(500)}</span>
             </a>
           </div>
           <p className="mt-4 text-zinc-400 text-sm sm:text-base leading-relaxed">
